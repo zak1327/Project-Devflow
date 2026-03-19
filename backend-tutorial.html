@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Tutorial - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tutorial-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="basic-web-dev.html">← Back to Web Dev</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="tutorial-hero">
+        <h1>Backend Development Tutorial</h1>
+        <p>Learn how to build powerful server applications that handle data and business logic</p>
+    </header>
+
+    <section class="tutorial-content">
+        <div class="container">
+            
+            <!-- What is Backend? -->
+            <div class="tutorial-section">
+                <h2>What is Backend Development?</h2>
+                <p>Backend development involves building the server-side logic that powers web applications. While frontend is what users see, backend handles data processing, business logic, authentication, and communication with databases. Backend developers build APIs (Application Programming Interfaces) that frontend applications communicate with.</p>
+                
+                <div class="info-box">
+                    <h3>Key Responsibilities:</h3>
+                    <ul>
+                        <li>Processing user requests and data</li>
+                        <li>Managing authentication and authorization</li>
+                        <li>Communicating with databases</li>
+                        <li>Building and maintaining APIs</li>
+                        <li>Handling business logic and calculations</li>
+                        <li>Ensuring security and data protection</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- How Backend Works -->
+            <div class="tutorial-section">
+                <h2>How Backend Works - Request/Response Cycle</h2>
+                <p>Backend applications follow a request/response model:</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-step">
+                        <h4>1. Frontend Sends Request</h4>
+                        <p>User clicks a button or submits a form. JavaScript sends data to the server.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>2. Server Receives Request</h4>
+                        <p>Backend server receives the request with data and URL parameters.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>3. Process & Query Database</h4>
+                        <p>Backend processes the request, queries database, performs calculations.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>4. Send Response</h4>
+                        <p>Server sends back result (JSON, data, or status message).</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>5. Frontend Uses Response</h4>
+                        <p>Frontend updates page based on server response.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Languages -->
+            <div class="tutorial-section">
+                <h2>Popular Backend Technologies</h2>
+                
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <h4>Node.js + Express</h4>
+                        <p>JavaScript on the server. Great for real-time applications.</p>
+                        <code>Language: JavaScript</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>Python + Django</h4>
+                        <p>Easy to learn, powerful. Great for startups.</p>
+                        <code>Language: Python</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>Python + Flask</h4>
+                        <p>Lightweight framework with lots of flexibility.</p>
+                        <code>Language: Python</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>Java + Spring</h4>
+                        <p>Enterprise-level framework used by big companies.</p>
+                        <code>Language: Java</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>PHP + Laravel</h4>
+                        <p>Classic web language, widely hosted everywhere.</p>
+                        <code>Language: PHP</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>Go</h4>
+                        <p>Modern language designed for speed and simplicity.</p>
+                        <code>Language: Go</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node.js Example -->
+            <div class="tutorial-section">
+                <h2>Node.js & Express - Practical Example</h2>
+                <p>Node.js allows you to write backend code in JavaScript. Express is the most popular framework for building APIs.</p>
+
+                <h3>Setting Up a Simple Server</h3>
+                <div class="code-example">
+                    <pre><code>// Import Express
+const express = require('express');
+const app = express();
+
+// Middleware to parse JSON
+app.use(express.json());
+
+// GET endpoint - Retrieve data
+app.get('/api/greeting', (req, res) => {
+    res.json({ 
+        message: 'Hello World!',
+        timestamp: new Date()
+    });
+});
+
+// POST endpoint - Receive data
+app.post('/api/users', (req, res) => {
+    const user = req.body; // Get data from request
+    
+    // Process user data
+    console.log('New user:', user);
+    
+    // Send response
+    res.json({ 
+        success: true,
+        userId: 123
+    });
+});
+
+// Start server on port 3000
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Different Request Methods (HTTP Verbs)</h3>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>GET</strong> - Retrieve data from server</li>
+                        <li><strong>POST</strong> - Send data to server to create something</li>
+                        <li><strong>PUT</strong> - Send data to server to update something</li>
+                        <li><strong>DELETE</strong> - Delete data from server</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Building an API -->
+            <div class="tutorial-section">
+                <h2>Building a Complete API</h2>
+                <p>Here's an example of a simple user management API:</p>
+
+                <div class="code-example">
+                    <pre><code>const express = require('express');
+const app = express();
+app.use(express.json());
+
+// In-memory storage (in real app, use database)
+let users = [];
+let nextId = 1;
+
+// GET all users
+app.get('/api/users', (req, res) => {
+    res.json(users);
+});
+
+// GET specific user
+app.get('/api/users/:id', (req, res) => {
+    const user = users.find(u => u.id == req.params.id);
+    if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+    }
+    res.json(user);
+});
+
+// CREATE new user
+app.post('/api/users', (req, res) => {
+    const { name, email } = req.body;
+    
+    if (!name || !email) {
+        return res.status(400).json({ error: 'Name and email required' });
+    }
+    
+    const user = { id: nextId++, name, email };
+    users.push(user);
+    res.status(201).json(user);
+});
+
+// UPDATE user
+app.put('/api/users/:id', (req, res) => {
+    const user = users.find(u => u.id == req.params.id);
+    if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+    }
+    
+    user.name = req.body.name || user.name;
+    user.email = req.body.email || user.email;
+    res.json(user);
+});
+
+// DELETE user
+app.delete('/api/users/:id', (req, res) => {
+    users = users.filter(u => u.id != req.params.id);
+    res.json({ message: 'User deleted' });
+});
+
+app.listen(3000, () => {
+    console.log('API running on port 3000');
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Frontend Calling Backend -->
+            <div class="tutorial-section">
+                <h2>Frontend Calling Backend API</h2>
+                <p>Frontend applications use the Fetch API or Axios to communicate with backend servers.</p>
+
+                <h3>Sending Data to Backend</h3>
+                <div class="code-example">
+                    <pre><code>// GET request - Retrieve data
+fetch('http://localhost:3000/api/users')
+    .then(response => response.json())
+    .then(data => console.log('Users:', data))
+    .catch(error => console.error('Error:', error));
+
+// POST request - Send data
+const newUser = { name: 'John', email: 'john@example.com' };
+
+fetch('http://localhost:3000/api/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(newUser)
+})
+.then(response => response.json())
+.then(data => console.log('User created:', data))
+.catch(error => console.error('Error:', error));
+
+// PUT request - Update data
+fetch('http://localhost:3000/api/users/1', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'Jane' })
+})
+.then(response => response.json())
+.then(data => console.log('User updated:', data))
+.catch(error => console.error('Error:', error));
+
+// DELETE request - Remove data
+fetch('http://localhost:3000/api/users/1', {
+    method: 'DELETE'
+})
+.then(response => response.json())
+.then(data => console.log('User deleted:', data))
+.catch(error => console.error('Error:', error));</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Authentication -->
+            <div class="tutorial-section">
+                <h2>Authentication in Backend</h2>
+                <p>Backend must verify that users are who they claim to be before allowing access to protected resources.</p>
+
+                <h3>JWT (JSON Web Tokens)</h3>
+                <div class="code-example">
+                    <pre><code>const jwt = require('jsonwebtoken');
+
+// Login endpoint - Generate token
+app.post('/api/login', (req, res) => {
+    const { email, password } = req.body;
+    
+    // Verify credentials (check against database)
+    if (email === 'user@example.com' && password === 'password123') {
+        // Create JWT token
+        const token = jwt.sign(
+            { email: email },
+            'your-secret-key',
+            { expiresIn: '2h' }
+        );
+        
+        res.json({ token: token });
+    } else {
+        res.status(401).json({ error: 'Invalid credentials' });
+    }
+});
+
+// Protected endpoint - Verify token
+function authenticateToken(req, res, next) {
+    const token = req.headers['authorization'];
+    
+    if (!token) {
+        return res.status(403).json({ error: 'No token provided' });
+    }
+    
+    jwt.verify(token, 'your-secret-key', (err, decoded) => {
+        if (err) return res.status(403).json({ error: 'Invalid token' });
+        req.user = decoded;
+        next();
+    });
+}
+
+// Use middleware on protected route
+app.get('/api/protected', authenticateToken, (req, res) => {
+    res.json({ message: 'This is protected', user: req.user });
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Error Handling -->
+            <div class="tutorial-section">
+                <h2>Error Handling Best Practices</h2>
+                <p>Good backend code handles errors gracefully and provides helpful messages.</p>
+
+                <div class="code-example">
+                    <pre><code>// Standard error codes:
+// 200 - OK (success)
+// 201 - Created (resource created)
+// 400 - Bad Request (invalid input)
+// 401 - Unauthorized (authentication required)
+// 403 - Forbidden (permission denied)
+// 404 - Not Found
+// 500 - Server Error
+
+// Example with proper error handling
+app.post('/api/users', (req, res) => {
+    try {
+        const { name, email } = req.body;
+        
+        // Validate input
+        if (!name || name.trim() === '') {
+            return res.status(400).json({ 
+                error: 'Name is required' 
+            });
+        }
+        
+        if (!email || !email.includes('@')) {
+            return res.status(400).json({ 
+                error: 'Valid email is required' 
+            });
+        }
+        
+        // Create user
+        const user = { name, email };
+        
+        // Success response
+        res.status(201).json({ 
+            success: true,
+            message: 'User created successfully',
+            data: user 
+        });
+        
+    } catch (error) {
+        console.error('Error creating user:', error);
+        res.status(500).json({ 
+            error: 'Internal server error' 
+        });
+    }
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="tutorial-section">
+                <h2>Backend Best Practices</h2>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>RESTful APIs</strong> - Follow REST principles for consistent APIs</li>
+                        <li><strong>Input Validation</strong> - Always validate data from frontend</li>
+                        <li><strong>Security</strong> - Hash passwords, use HTTPS, validate tokens</li>
+                        <li><strong>Error Handling</strong> - Return appropriate HTTP status codes and messages</li>
+                        <li><strong>Logging</strong> - Log important events for debugging</li>
+                        <li><strong>Rate Limiting</strong> - Prevent abuse by limiting requests per user</li>
+                        <li><strong>Database Optimization</strong> - Write efficient queries and use indexing</li>
+                        <li><strong>Code Organization</strong> - Keep code modular with routes, controllers, models</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Getting Started -->
+            <div class="tutorial-section">
+                <h2>Getting Started Project</h2>
+                <p>Create your first Node.js API server:</p>
+                
+                <h3>Installation</h3>
+                <div class="code-example">
+                    <pre><code># Install Node.js from nodejs.org, then:
+npm init -y
+npm install express
+npm install nodemon --save-dev  # Auto-reloads on file changes</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Create server.js</h3>
+                <div class="code-example">
+                    <pre><code>const express = require('express');
+const app = express();
+app.use(express.json());
+
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'Backend is working!' });
+});
+
+app.post('/api/test', (req, res) => {
+    res.json({ 
+        received: req.body,
+        processedAt: new Date()
+    });
+});
+
+app.listen(3000, () => {
+    console.log('Server running at http://localhost:3000');
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Run the server</h3>
+                <div class="code-example">
+                    <pre><code>npx nodemon server.js</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <p><strong>Test it:</strong> Visit http://localhost:3000/api/test in your browser or use Postman!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Project DEVFLOW. All rights reserved.</p>
+    </footer>
+
+    <script src="tutorial-script.js"></script>
+</body>
+</html>

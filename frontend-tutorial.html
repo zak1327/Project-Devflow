@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Tutorial - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tutorial-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="basic-web-dev.html">← Back to Web Dev</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="tutorial-hero">
+        <h1>Frontend Development Tutorial</h1>
+        <p>Master the art of building beautiful, responsive, and interactive user interfaces</p>
+    </header>
+
+    <section class="tutorial-content">
+        <div class="container">
+            
+            <!-- What is Frontend? -->
+            <div class="tutorial-section">
+                <h2>What is Frontend Development?</h2>
+                <p>Frontend development refers to everything that happens in the browser - what users see and interact with. It's the visual and interactive part of a website or application. Frontend developers use HTML, CSS, and JavaScript to create engaging user experiences.</p>
+                
+                <div class="info-box">
+                    <h3>Key Technologies:</h3>
+                    <ul>
+                        <li><strong>HTML</strong> - Structure and content</li>
+                        <li><strong>CSS</strong> - Styling and layout</li>
+                        <li><strong>JavaScript</strong> - Interactivity and dynamic behavior</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HTML Deep Dive -->
+            <div class="tutorial-section">
+                <h2>HTML - Building the Structure</h2>
+                <p>HTML (HyperText Markup Language) is the backbone of every website. It provides the structure and semantic meaning to content.</p>
+
+                <h3>HTML Document Structure</h3>
+                <div class="code-example">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Site&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Important HTML Elements</h3>
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <h4>&lt;div&gt;</h4>
+                        <p>Container for grouping content. Block element.</p>
+                        <code>&lt;div class="container"&gt;Content&lt;/div&gt;</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>&lt;form&gt;</h4>
+                        <p>Creates user input forms. Sends data to server.</p>
+                        <code>&lt;form method="POST" action="/submit"&gt;&lt;/form&gt;</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>&lt;input&gt;</h4>
+                        <p>Allows user text input, buttons, checkboxes, etc.</p>
+                        <code>&lt;input type="text" placeholder="Enter name"&gt;</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>&lt;button&gt;</h4>
+                        <p>Clickable element that triggers actions.</p>
+                        <code>&lt;button onclick="handleClick()"&gt;Click Me&lt;/button&gt;</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>&lt;img&gt;</h4>
+                        <p>Displays images on the page.</p>
+                        <code>&lt;img src="image.jpg" alt="Description"&gt;</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>&lt;a&gt;</h4>
+                        <p>Creates hyperlinks to other pages.</p>
+                        <code>&lt;a href="page.html"&gt;Link&lt;/a&gt;</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Deep Dive -->
+            <div class="tutorial-section">
+                <h2>CSS - Styling & Layout</h2>
+                <p>CSS (Cascading Style Sheets) controls the appearance of HTML elements. It handles colors, fonts, spacing, positioning, and responsive design.</p>
+
+                <h3>CSS Selectors</h3>
+                <div class="code-example">
+                    <pre><code>/* Element Selector */
+p {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Class Selector */
+.button {
+    background-color: #667eea;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ID Selector */
+#main-header {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* Pseudo-class */
+button:hover {
+    background-color: #764ba2;
+    transition: background-color 0.3s;
+}</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>CSS Box Model</h3>
+                <div class="info-box">
+                    <p>Understanding the box model is crucial for CSS layouts:</p>
+                    <ul>
+                        <li><strong>Margin</strong> - Space outside the element</li>
+                        <li><strong>Border</strong> - Line around the element</li>
+                        <li><strong>Padding</strong> - Space inside the element, around content</li>
+                        <li><strong>Content</strong> - The actual content (text, images, etc.)</li>
+                    </ul>
+                </div>
+
+                <h3>Flexbox for Layouts</h3>
+                <div class="code-example">
+                    <pre><code>.container {
+    display: flex;
+    justify-content: center;      /* Center items horizontally */
+    align-items: center;          /* Center items vertically */
+    gap: 20px;                    /* Space between items */
+    flex-wrap: wrap;              /* Wrap items to next line */
+}
+
+.item {
+    flex: 1;                      /* Equal width items */
+    background: #667eea;
+    padding: 20px;
+    border-radius: 8px;
+}</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="tutorial-section">
+                <h2>JavaScript - Adding Interactivity</h2>
+                <p>JavaScript brings websites to life by allowing you to respond to user actions and manipulate the page dynamically.</p>
+
+                <h3>Selecting and Manipulating Elements</h3>
+                <div class="code-example">
+                    <pre><code>// Select an element
+const button = document.getElementById('myButton');
+const items = document.querySelectorAll('.item');
+
+// Change content
+button.textContent = 'Click me!';
+
+// Add/Remove classes
+button.classList.add('active');
+button.classList.remove('disabled');
+
+// Change styles
+button.style.backgroundColor = '#667eea';
+button.style.color = 'white';
+
+// Listen to events
+button.addEventListener('click', function() {
+    console.log('Button clicked!');
+    alert('User clicked the button');
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Common Events</h3>
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <h4>click</h4>
+                        <p>User clicks an element</p>
+                        <code>element.addEventListener('click', function() {})</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>submit</h4>
+                        <p>User submits a form</p>
+                        <code>form.addEventListener('submit', function() {})</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>change</h4>
+                        <p>User changes input value</p>
+                        <code>input.addEventListener('change', function() {})</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>keydown</h4>
+                        <p>User presses a key</p>
+                        <code>document.addEventListener('keydown', function() {})</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>load</h4>
+                        <p>Page/resource finishes loading</p>
+                        <code>window.addEventListener('load', function() {})</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>mouseover</h4>
+                        <p>Mouse hovers over element</p>
+                        <code>element.addEventListener('mouseover', function() {})</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Example -->
+            <div class="tutorial-section">
+                <h2>Complete Example: Login Form</h2>
+                <p>Here's a complete example combining HTML, CSS, and JavaScript:</p>
+
+                <div class="code-example">
+                    <pre><code>&lt;!-- HTML --&gt;
+&lt;form id="loginForm"&gt;
+    &lt;input type="email" id="email" placeholder="Enter email" required&gt;
+    &lt;input type="password" id="password" placeholder="Enter password" required&gt;
+    &lt;button type="submit"&gt;Login&lt;/button&gt;
+    &lt;p id="message"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* CSS */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>// JavaScript
+const form = document.getElementById('loginForm');
+const messageEl = document.getElementById('message');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop form submission
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    // Validate
+    if (email && password.length >= 6) {
+        messageEl.textContent = 'Login successful!';
+        messageEl.style.color = 'green';
+    } else {
+        messageEl.textContent = 'Invalid email or password!';
+        messageEl.style.color = 'red';
+    }
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="tutorial-section">
+                <h2>Frontend Best Practices</h2>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>Semantic HTML</strong> - Use proper HTML tags that describe content meaning</li>
+                        <li><strong>Responsive Design</strong> - Make websites work on all screen sizes</li>
+                        <li><strong>Accessibility</strong> - Ensure everyone can use your site (including people with disabilities)</li>
+                        <li><strong>Performance</strong> - Optimize images, minimize CSS/JS, lazy load content</li>
+                        <li><strong>SEO</strong> - Use proper meta tags, headings, and descriptive text</li>
+                        <li><strong>Clean Code</strong> - Write organized, commented, and maintainable code</li>
+                        <li><strong>Testing</strong> - Test your site across different browsers and devices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Getting Started -->
+            <div class="tutorial-section">
+                <h2>Getting Started Project</h2>
+                <p>Create your first webpage with this starter template:</p>
+                <div class="code-example">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: Arial; margin: 20px; }
+        h1 { color: #667eea; }
+        .card { background: #f0f0f0; padding: 20px; margin: 10px 0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    &lt;div class="card"&gt;
+        &lt;h2&gt;Hello World&lt;/h2&gt;
+        &lt;p&gt;This is my first website!&lt;/p&gt;
+        &lt;button onclick="alert('You clicked me!')"&gt;Click Me&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <p><strong>Try it:</strong> Save this as an HTML file and open it in your browser!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Project DEVFLOW. All rights reserved.</p>
+    </footer>
+
+    <script src="tutorial-script.js"></script>
+</body>
+</html>

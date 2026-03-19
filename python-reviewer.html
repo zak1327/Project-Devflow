@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Reviewer - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="code-reviewer.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="reviewer-hero">
+        <h1>Python Reviewer</h1>
+        <p>Review essential Python functions and concepts for versatile programming.</p>
+    </header>
+    <section class="reviewer-section">
+        <a href="code-development.html" class="back-btn">&larr; Back to Code Development</a>
+        <h2>What is Python?</h2>
+        <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It's widely used for web development, data analysis, AI, and automation.</p>
+        <div class="web-design-examples">
+            <div class="web-design-example">
+                <h3>Simple Syntax</h3>
+                <p>Write clean, readable code with minimal boilerplate.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Rich Ecosystem</h3>
+                <p>Access thousands of libraries for various tasks and domains.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Data Structures</h3>
+                <p>Use built-in lists, dictionaries, and other data structures efficiently.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Versatility</h3>
+                <p>Apply Python to web apps, data science, machine learning, and more.</p>
+            </div>
+        </div>
+        <div class="reviewer-functions">
+            <h2 class="centered-heading">Basic Python Functions</h2>
+            <div class="reviewer-function">
+                <h3>1. Function Definition</h3>
+                <p>Define functions using the def keyword with parameters and return values.</p>
+                <div class="function-example">
+<pre><code>def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("World"))</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>2. List Operations</h3>
+                <p>Use lists for mutable sequences with various built-in methods.</p>
+                <div class="function-example">
+<pre><code>numbers = [1, 2, 3, 4, 5]
+numbers.append(6)
+squared = [x**2 for x in numbers]
+print(squared)</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>3. Dictionary Usage</h3>
+                <p>Create key-value pairs with dictionaries for efficient data lookup.</p>
+                <div class="function-example">
+<pre><code>person = {"name": "Alice", "age": 30}
+person["city"] = "New York"
+print(person["name"])</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>4. File Handling</h3>
+                <p>Read from and write to files using context managers.</p>
+                <div class="function-example">
+<pre><code>with open("example.txt", "w") as file:
+    file.write("Hello, World!")
+
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>5. Classes and Objects</h3>
+                <p>Define classes with methods and create instances (objects).</p>
+                <div class="function-example">
+<pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+    
+    def bark(self):
+        return f"{self.name} says woof!"
+
+dog = Dog("Buddy")
+print(dog.bark())</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>6. Exception Handling</h3>
+                <p>Use try-except blocks to handle errors gracefully.</p>
+                <div class="function-example">
+<pre><code>try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("Execution completed.")</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Reviewer - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="code-reviewer.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="reviewer-hero">
+        <h1>C++ Reviewer</h1>
+        <p>Review essential C++ functions and concepts for system programming.</p>
+    </header>
+    <section class="reviewer-section">
+        <a href="code-development.html" class="back-btn">&larr; Back to Code Development</a>
+        <h2>What is C++?</h2>
+        <p>C++ is a general-purpose programming language that supports object-oriented, procedural, and generic programming. It's widely used for system software, game development, and performance-critical applications.</p>
+        <div class="web-design-examples">
+            <div class="web-design-example">
+                <h3>Object-Oriented Programming</h3>
+                <p>Use classes, inheritance, and polymorphism for modular code design.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Memory Management</h3>
+                <p>Control memory allocation and deallocation with pointers and smart pointers.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Standard Template Library</h3>
+                <p>Utilize powerful data structures and algorithms from the STL.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Performance Optimization</h3>
+                <p>Write efficient code with low-level control and optimization techniques.</p>
+            </div>
+        </div>
+        <div class="reviewer-functions">
+            <h2 class="centered-heading">Basic C++ Functions</h2>
+            <div class="reviewer-function">
+                <h3>1. Function Definition</h3>
+                <p>Define functions with return types, parameters, and function bodies.</p>
+                <div class="function-example">
+<pre><code>int add(int a, int b) {
+    return a + b;
+}
+int main() {
+    std::cout << add(5, 3) << std::endl;
+    return 0;
+}</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>2. Class and Objects</h3>
+                <p>Create classes with member functions and instantiate objects.</p>
+                <div class="function-example">
+<pre><code>class Rectangle {
+public:
+    int width, height;
+    int area() {
+        return width * height;
+    }
+};
+int main() {
+    Rectangle rect;
+    rect.width = 10;
+    rect.height = 5;
+    std::cout << rect.area() << std::endl;
+}</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>3. Pointers</h3>
+                <p>Use pointers for memory manipulation and dynamic allocation.</p>
+                <div class="function-example">
+<pre><code>int* ptr = new int(42);
+std::cout << *ptr << std::endl;
+delete ptr;</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>4. Vectors</h3>
+                <p>Use std::vector for dynamic arrays with automatic memory management.</p>
+                <div class="function-example">
+<pre><code>#include &lt;vector&gt;
+std::vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
+numbers.push_back(6);
+for(int num : numbers) {
+    std::cout << num << " ";
+}</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>5. File I/O</h3>
+                <p>Read from and write to files using fstream.</p>
+                <div class="function-example">
+<pre><code>#include &lt;fstream&gt;
+std::ofstream file("output.txt");
+file << "Hello, World!" << std::endl;
+file.close();</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>6. Exception Handling</h3>
+                <p>Use try-catch blocks to handle runtime errors gracefully.</p>
+                <div class="function-example">
+<pre><code>try {
+    int result = 10 / 0;
+} catch (const std::exception& e) {
+    std::cout << "Error: " << e.what() << std::endl;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

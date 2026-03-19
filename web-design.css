@@ -1,0 +1,194 @@
+/* web-design.css - Custom styles for the Web Designing page */
+
+body {
+    background: linear-gradient(120deg, #f8fafc 1%, #e0e7ff 100%);
+}
+
+.web-design-hero {
+    background: linear-gradient(135deg, #d2edff 1%,#3498db 100%);
+    color: #042664;
+    padding: 6rem 2rem 3rem 2rem;
+    text-align: center;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    box-shadow: 0 8px 32px rgba(72, 142, 248, 0.452);
+}
+
+.web-design-hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    color: #0f2497;
+}
+
+.web-design-hero p {
+    font-size: 1.4rem;
+    color: #636e72;
+    margin-bottom: 0;
+}
+
+.web-design-section {
+     position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    padding: 3rem 2rem 2rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+}
+
+.web-design-section h2 {
+    color: #6c63ff;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.web-design-section p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.web-design-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.web-design-example {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(253, 160, 133, 0.12);
+    padding: 2rem 1.5rem;
+    min-width: 220px;
+    max-width: 320px;
+    flex: 1 1 220px;
+    text-align: left;
+    color: #2d3436;
+}
+
+.web-design-example h3 {
+    color: #ff6f61;
+    margin-bottom: 0.7rem;
+    font-size: 1.3rem;
+}
+
+.web-design-example p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* --- Aesthetic improvements for function cards --- */
+.web-design-functions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.web-design-function {
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(142, 197, 252, 0.18);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    min-width: 260px;
+    max-width: 350px;
+    flex: 1 1 260px;
+    text-align: left;
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    border: 1.5px solid #b388ff33;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.web-design-function:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(142, 197, 252, 0.28);
+}
+.web-design-function h3 {
+    color: #7b1fa2;
+    margin-bottom: 0.7rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.web-design-function p {
+    color: #333;
+    font-size: 1.02rem;
+    margin-bottom: 0.7rem;
+    margin-right: 1rem;
+}
+.function-example {
+    background: #f3e9ff;
+    border-left: 4px solid #7b1fa2;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-size: 0.98rem;
+    color: #222;
+    overflow-x: auto;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 8px #b388ff22;
+}
+pre {
+    margin: 0;
+    background: none;
+}
+
+.footer{
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 8rem;
+}
+
+/* --- Responsive improvements --- */
+@media (max-width: 900px) {
+    .web-design-functions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .web-design-function {
+        max-width: 95vw;
+    }
+}
+
+/* Center the section title and first function card */
+.web-design-functions > h2 {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    color: #7b1fa2;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.web-design-function:second-of-type {
+    margin-left: 4rem !important;
+    display: block;
+}
+.web-design-function:nth-of-type(2) {
+    margin-left: 4rem !important;
+}
+
+.centered-heading {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

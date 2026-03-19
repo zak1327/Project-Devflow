@@ -1,0 +1,133 @@
+/* Styles for the Assessment Quiz page */
+
+.quiz-section {
+    padding: 3rem 2rem 3rem;
+    max-width: 960px;
+    margin: -2rem auto 6rem auto;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 26px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+}
+
+.quiz-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.quiz-block {
+    margin-bottom: 2rem;
+}
+
+.quiz-question {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 18px;
+    background: #f6f8ff;
+    border: 1px solid rgba(42, 80, 219, 0.18);
+}
+
+.quiz-question p {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.quiz-question label {
+    display: block;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+}
+
+.quiz-question input[type="text"] {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(47, 91, 250, 0.25);
+    font-size: 1rem;
+}
+
+.quiz-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.quiz-result {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.quiz-result-box {
+    display: inline-block;
+    padding: 1rem 1.4rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: rgb(240, 242, 248);
+    font-weight: 700;
+}
+.btn{
+background-color: #255fff;
+color: white;
+}
+
+.btn:hover {
+    background-color: #4688f8
+}
+
+
+
+.btn-secondary {
+    background-color: #255fff;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #4688f8;
+}
+.answer-details {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: #f9f9f9;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+}
+
+.answer-details h4 {
+    margin-top: 0;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.answer-item {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 4px solid #3498db;
+}
+
+.answer-item p {
+    margin: 0.3rem 0;
+}
+
+.correct {
+    color: #27ae60;
+    font-weight: 700;
+}
+
+.incorrect {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.correct-answer {
+    color: #27ae60;
+    margin-top: 0.5rem !important;
+    background: #f0fdf4;
+    padding: 0.6rem;
+    border-radius: 8px;
+}

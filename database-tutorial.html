@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Tutorial - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tutorial-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="basic-web-dev.html">← Back to Web Dev</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="tutorial-hero">
+        <h1>Database Tutorial</h1>
+        <p>Learn how to store, organize, and retrieve data effectively using databases</p>
+    </header>
+
+    <section class="tutorial-content">
+        <div class="container">
+            
+            <!-- What is a Database? -->
+            <div class="tutorial-section">
+                <h2>What is a Database?</h2>
+                <p>A database is an organized collection of structured data stored on a server. Instead of keeping data in random files, databases organize information in a structured way using tables with rows and columns, similar to Excel spreadsheets. Databases allow you to quickly search, filter, and retrieve data.</p>
+                
+                <div class="info-box">
+                    <h3>Why Use Databases?</h3>
+                    <ul>
+                        <li><strong>Persistence</strong> - Data survives even if the server restarts</li>
+                        <li><strong>Organization</strong> - Data is organized in tables with clear structure</li>
+                        <li><strong>Scalability</strong> - Handle millions of records efficiently</li>
+                        <li><strong>Query Ability</strong> - Fast searching and filtering</li>
+                        <li><strong>Performance</strong> - Optimized retrieval with indexing</li>
+                        <li><strong>Security</strong> - Access controls and encryption</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Types of Databases -->
+            <div class="tutorial-section">
+                <h2>Types of Databases</h2>
+                
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <h4>SQL / Relational</h4>
+                        <p>Structured data in tables with relationships. Most common for business apps.</p>
+                        <code>Examples: MySQL, PostgreSQL, SQL Server</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>NoSQL / Document</h4>
+                        <p>Flexible schema, stores data as documents (JSON). Great for flexible data.</p>
+                        <code>Examples: MongoDB, Firebase, CouchDB</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>Key-Value</h4>
+                        <p>Simple key-value pairs. Fast but limited. Used for caching.</p>
+                        <code>Examples: Redis, Memcached</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>Graph</h4>
+                        <p>Stores data as nodes and relationships. Perfect for social networks.</p>
+                        <code>Examples: Neo4j</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SQL Databases -->
+            <div class="tutorial-section">
+                <h2>SQL (Relational) Databases</h2>
+                <p>SQL (Structured Query Language) databases are the most traditional and widely used. Data is organized in tables with relationships between them.</p>
+
+                <h3>Understanding Tables</h3>
+                <p>A table is like a spreadsheet with rows and columns:</p>
+                <div class="table-example">
+                    <table border="1" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                        <tr style="background-color: #667eea; color: white;">
+                            <th style="padding: 10px;">ID</th>
+                            <th style="padding: 10px;">Name</th>
+                            <th style="padding: 10px;">Email</th>
+                            <th style="padding: 10px;">Score</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">1</td>
+                            <td style="padding: 10px;">John Smith</td>
+                            <td style="padding: 10px;">john@example.com</td>
+                            <td style="padding: 10px;">95</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">2</td>
+                            <td style="padding: 10px;">Jane Doe</td>
+                            <td style="padding: 10px;">jane@example.com</td>
+                            <td style="padding: 10px;">87</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">3</td>
+                            <td style="padding: 10px;">Bob Wilson</td>
+                            <td style="padding: 10px;">bob@example.com</td>
+                            <td style="padding: 10px;">76</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h3>Key Concepts</h3>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>Table</strong> - Collection of similar data (like users, products)</li>
+                        <li><strong>Column</strong> - A field/attribute (like name, email, age)</li>
+                        <li><strong>Row</strong> - A record with data for all columns</li>
+                        <li><strong>Primary Key</strong> - Unique identifier for each row (usually ID)</li>
+                        <li><strong>Foreign Key</strong> - References a primary key in another table</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SQL Queries -->
+            <div class="tutorial-section">
+                <h2>SQL Queries - CRUD Operations</h2>
+                <p>CRUD stands for Create, Read, Update, Delete - the basic operations on databases.</p>
+
+                <h3>CREATE - Insert Data</h3>
+                <div class="code-example">
+                    <pre><code>-- Insert a single record
+INSERT INTO users (name, email, score)
+VALUES ('John Doe', 'john@example.com', 92);
+
+-- Insert multiple records
+INSERT INTO users (name, email, score) VALUES
+  ('Jane Smith', 'jane@example.com', 88),
+  ('Bob Johnson', 'bob@example.com', 76),
+  ('Alice Brown', 'alice@example.com', 95);</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>READ - Retrieve Data</h3>
+                <div class="code-example">
+                    <pre><code>-- Get all users
+SELECT * FROM users;
+
+-- Get specific columns
+SELECT name, email FROM users;
+
+-- Filter with WHERE clause
+SELECT * FROM users WHERE score > 80;
+
+-- Find specific user
+SELECT * FROM users WHERE email = 'john@example.com';
+
+-- Sort results
+SELECT * FROM users ORDER BY score DESC;
+
+-- Limit number of results
+SELECT * FROM users LIMIT 5;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>UPDATE - Modify Data</h3>
+                <div class="code-example">
+                    <pre><code>-- Update a specific user's score
+UPDATE users 
+SET score = 98 
+WHERE email = 'john@example.com';
+
+-- Update multiple fields
+UPDATE users 
+SET name = 'John Smith', score = 96 
+WHERE id = 1;
+
+-- Update multiple records
+UPDATE users 
+SET score = score + 5 
+WHERE score < 80;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>DELETE - Remove Data</h3>
+                <div class="code-example">
+                    <pre><code>-- Delete a specific user
+DELETE FROM users WHERE email = 'bob@example.com';
+
+-- Delete multiple records
+DELETE FROM users WHERE score < 60;
+
+-- Delete all records (use with caution!)
+DELETE FROM users;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Advanced Queries -->
+            <div class="tutorial-section">
+                <h2>Advanced SQL Queries</h2>
+
+                <h3>Joining Tables</h3>
+                <p>Combine data from multiple related tables:</p>
+                <div class="code-example">
+                    <pre><code>-- INNER JOIN - Show only matching records
+SELECT users.name, orders.amount 
+FROM users 
+INNER JOIN orders ON users.id = orders.user_id;
+
+-- LEFT JOIN - Include all from left table
+SELECT users.name, COUNT(orders.id) as order_count
+FROM users 
+LEFT JOIN orders ON users.id = orders.user_id
+GROUP BY users.id;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Aggregation Functions</h3>
+                <div class="code-example">
+                    <pre><code>-- Count records
+SELECT COUNT(*) as total_users FROM users;
+
+-- Calculate average
+SELECT AVG(score) as average_score FROM users;
+
+-- Get maximum value
+SELECT MAX(score) as highest_score FROM users;
+
+-- Get minimum value
+SELECT MIN(score) as lowest_score FROM users;
+
+-- Sum values
+SELECT SUM(score) as total_score FROM users;
+
+-- Group and aggregate
+SELECT 
+    department, 
+    COUNT(*) as employees,
+    AVG(salary) as avg_salary
+FROM employees
+GROUP BY department;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Creating Tables -->
+            <div class="tutorial-section">
+                <h2>Creating Database and Tables</h2>
+
+                <h3>Create Database</h3>
+                <div class="code-example">
+                    <pre><code>-- Create a new database
+CREATE DATABASE my_app_db;
+
+-- Select database
+USE my_app_db;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Create Tables</h3>
+                <div class="code-example">
+                    <pre><code>-- Create users table
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    score INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create orders table with foreign key
+CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    amount DECIMAL(10, 2),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+-- Data types:
+-- INT - Integer numbers
+-- VARCHAR(n) - Text up to n characters
+-- DECIMAL(10,2) - Decimal numbers
+-- DATE - Date only
+-- TIMESTAMP - Date and time
+-- BOOLEAN - True/False
+-- NOT NULL - Must have a value
+-- DEFAULT - Default value
+-- AUTO_INCREMENT - Auto generate number
+-- UNIQUE - Must be unique in table
+-- PRIMARY KEY - Unique identifier
+-- FOREIGN KEY - Links to another table</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Connecting Frontend to Database -->
+            <div class="tutorial-section">
+                <h2>Frontend ↔ Backend ↔ Database Flow</h2>
+                
+                <div class="flow-diagram">
+                    <div class="flow-step">
+                        <h4>1. User Submits Form</h4>
+                        <p>User fills out form and clicks submit in frontend</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>2. Frontend Sends Data</h4>
+                        <p>JavaScript sends data to backend API using fetch()</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>3. Backend Receives</h4>
+                        <p>Express server receives and validates the data</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>4. Save to Database</h4>
+                        <p>Backend executes SQL INSERT query to save data</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>5. Return Response</h4>
+                        <p>Backend sends back confirmation (success/error)</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <h4>6. Update Frontend</h4>
+                        <p>Frontend updates page to show success message</p>
+                    </div>
+                </div>
+
+                <h3>Example: Saving User Registration</h3>
+                <div class="code-example">
+                    <pre><code>// Frontend - registration-form.html
+&lt;form id="regForm"&gt;
+    &lt;input type="text" id="name" placeholder="Name" required&gt;
+    &lt;input type="email" id="email" placeholder="Email" required&gt;
+    &lt;button type="submit"&gt;Register&lt;/button&gt;
+&lt;/form&gt;
+
+// Frontend - JavaScript
+document.getElementById('regForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const data = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value
+    };
+    
+    // Send to backend API
+    const response = await fetch('http://localhost:3000/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+    
+    const result = await response.json();
+    if (result.success) {
+        alert('Registration successful!');
+    }
+});
+
+// Backend - Node.js/Express server.js
+app.post('/api/register', async (req, res) => {
+    const { name, email } = req.body;
+    
+    try {
+        // Insert into database
+        const query = 'INSERT INTO users (name, email) VALUES (?, ?)';
+        await db.execute(query, [name, email]);
+        
+        // Return success response
+        res.json({ success: true, message: 'User registered!' });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="tutorial-section">
+                <h2>Database Best Practices</h2>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>Use Primary Keys</strong> - Every table should have a unique identifier</li>
+                        <li><strong>Normalize Data</strong> - Organize data to reduce redundancy</li>
+                        <li><strong>Use Prepared Statements</strong> - Prevent SQL injection attacks</li>
+                        <li><strong>Index Important Columns</strong> - Speed up searches</li>
+                        <li><strong>Regular Backups</strong> - Never lose data</li>
+                        <li><strong>Appropriate Data Types</strong> - Use correct types for storage efficiency</li>
+                        <li><strong>Validate Input</strong> - Check data before inserting</li>
+                        <li><strong>Use Transactions</strong> - Ensure data consistency</li>
+                        <li><strong>Monitor Performance</strong> - Track slow queries</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Common Database Mistakes -->
+            <div class="tutorial-section">
+                <h2>Common Database Mistakes to Avoid</h2>
+                
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <h4>❌ SQL Injection</h4>
+                        <p>Never directly insert user input into queries</p>
+                        <code>❌ "SELECT * FROM users WHERE id=" + userId</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>✅ Use Prepared Statements</h4>
+                        <p>Always use parameterized queries</p>
+                        <code>✅ "SELECT * FROM users WHERE id=?"</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>❌ No Backups</h4>
+                        <p>Risk losing all data permanently</p>
+                        <code>Automated backups are essential!</code>
+                    </div>
+                    <div class="element-card">
+                        <h4>✅ Schedule Backups</h4>
+                        <p>Automatic daily/weekly backups</p>
+                        <code>Easy recovery if something breaks</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Getting Started -->
+            <div class="tutorial-section">
+                <h2>Getting Started with MySQL</h2>
+
+                <h3>Installation</h3>
+                <div class="code-example">
+                    <pre><code># Download MySQL from mysql.com and install
+
+# Start MySQL server
+mysql -u root -p
+
+# Create a database
+CREATE DATABASE my_app;
+USE my_app;
+
+# Create a simple table
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+# Insert data
+INSERT INTO users (name, email) VALUES ('John', 'john@example.com');
+
+# Retrieve data
+SELECT * FROM users;</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+
+                <h3>Connect from Node.js</h3>
+                <div class="code-example">
+                    <pre><code>// Install mysql2
+npm install mysql2/promise
+
+// In your server.js
+const mysql = require('mysql2/promise');
+
+const connection = await mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'your_password',
+    database: 'my_app'
+});
+
+// Execute query
+const [rows] = await connection.execute('SELECT * FROM users');
+console.log(rows);</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Project DEVFLOW. All rights reserved.</p>
+    </footer>
+
+    <script src="tutorial-script.js"></script>
+</body>
+</html>

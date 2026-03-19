@@ -1,0 +1,1 @@
+SELECT * FROM quiz_record.quiz_record;

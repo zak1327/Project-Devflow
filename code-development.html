@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Development Reviewer - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="code-reviewer.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="reviewer-hero">
+        <h1>Code Development Reviewer</h1>
+        <p>Review and learn about essential programming functions, with clear examples for each.</p>
+    </header>
+    <section class="reviewer-section">
+        <h2>Key Programming Functions</h2>
+        <p>Explore specific programming languages and their functions:</p>
+        <div class="language-buttons">
+            <a href="html-reviewer.html" class="lang-btn">HTML Reviewer</a>
+            <a href="js-reviewer.html" class="lang-btn">JavaScript Reviewer</a>
+            <a href="cpp-reviewer.html" class="lang-btn">C++ Reviewer</a>
+            <a href="python-reviewer.html" class="lang-btn">Python Reviewer</a>
+        </div>
+        <div class="reviewer-functions">
+            <div class="reviewer-function">
+                <h3>1. Function Declaration</h3>
+                <p>Defines a reusable block of code that performs a specific task.</p>
+                <div class="function-example">
+                    <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}
+// Usage:
+greet("Alice"); // "Hello, Alice!"</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>2. Arrow Function</h3>
+                <p>A concise way to write functions using the <code>=&gt;</code> syntax.</p>
+                <div class="function-example">
+                    <pre><code>const add = (a, b) =&gt; a + b;
+// Usage:
+add(2, 3); // 5</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>3. Array Map</h3>
+                <p>Creates a new array by applying a function to each element of an array.</p>
+                <div class="function-example">
+                    <pre><code>const numbers = [1, 2, 3];
+const doubled = numbers.map(n =&gt; n * 2);
+// doubled: [2, 4, 6]</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>4. Filtering Arrays</h3>
+                <p>Returns a new array with elements that pass a test function.</p>
+                <div class="function-example">
+                    <pre><code>const numbers = [1, 2, 3, 4];
+const even = numbers.filter(n =&gt; n % 2 === 0);
+// even: [2, 4]</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>5. Object Destructuring</h3>
+                <p>Extracts properties from objects into variables.</p>
+                <div class="function-example">
+                    <pre><code>const user = { name: "Bob", age: 25 };
+const { name, age } = user;
+// name: "Bob", age: 25</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sanchez, Zakari. All rights reserved.</p>
+            <p>Contact: zakarisanchez13@gmail.com</p>
+        </div>
+    </footer>
+    <script src="home-script.js"></script>
+</body>
+</html>

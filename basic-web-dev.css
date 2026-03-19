@@ -1,0 +1,344 @@
+/* Basic Web Development Page Styles */
+
+.basic-web-dev-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.basic-web-dev-hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.basic-web-dev-hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.basic-web-dev-section {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.basic-web-dev-section h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.basic-web-dev-section h2.centered-heading {
+    margin-top: 60px;
+}
+
+.basic-web-dev-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.web-dev-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.web-dev-component {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.web-dev-component:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.web-dev-component h3 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.web-dev-component p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.web-dev-component.clickable {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.web-dev-component.clickable:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(102, 126, 234, 0.3);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+.learn-more {
+    color: #667eea;
+    font-weight: bold;
+    margin-top: auto;
+    padding-top: 15px;
+    font-size: 0.95em;
+}
+
+.code-example {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.code-example h3 {
+    background: #343a40;
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.code-example pre {
+    margin: 0;
+    padding: 20px;
+    background: #2d3748;
+    color: #e2e8f0;
+    overflow-x: auto;
+    position: relative;
+}
+
+.code-example code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.html-elements, .css-concepts, .database-concepts {
+    margin: 40px 0;
+}
+
+.html-elements h3, .css-concepts h3, .database-concepts h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.html-elements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.html-elements li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #667eea;
+}
+
+.html-elements code {
+    background: #f1f3f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d73a49;
+}
+
+.css-concepts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.css-concept {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.css-concept:hover {
+    transform: scale(1.02);
+}
+
+.css-concept h4 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.css-concept p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.database-concepts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.db-concept {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.db-concept:hover {
+    transform: scale(1.02);
+}
+
+.db-concept h4 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.db-concept p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.communication-flow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.flow-step {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.flow-step::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #667eea;
+}
+
+.flow-step:nth-child(1)::before {
+    display: none;
+}
+
+.flow-step h3 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.flow-step p {
+    font-size: 0.9em;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.getting-started, .next-steps {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+    border-left: 4px solid #667eea;
+}
+
+.getting-started h3, .next-steps h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.getting-started ol, .next-steps ul {
+    padding-left: 20px;
+}
+
+.getting-started li, .next-steps li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.next-steps a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.next-steps a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .basic-web-dev-hero h1 {
+        font-size: 2em;
+    }
+
+    .basic-web-dev-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .web-dev-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .css-concepts, .database-concepts {
+        grid-template-columns: 1fr;
+    }
+
+    .communication-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .code-example pre {
+        font-size: 0.8em;
+    }
+}
+
+/* Copy button styles are handled in JavaScript */
+
+/* Animation for interactive elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.web-dev-component, .css-concept, .db-concept, .flow-step {
+    animation: fadeInUp 0.6s ease-out;
+}

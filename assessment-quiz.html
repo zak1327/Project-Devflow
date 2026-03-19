@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Quiz - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assessment-quiz.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="review-quiz.html">Review Quiz</a></li>
+                <li><a href="interactive-quiz.html">Interactive Quiz</a></li>
+                <li><a href="code-development.html">Code Development</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Assessment Quiz</h1>
+            <p>This quiz will test your understanding with score tracking.</p>
+        </div>
+    </header>
+
+    <section class="quiz-section">
+        <div class="container">
+            <h2>Assessment Quiz</h2>
+            <form id="assessmentForm">
+                <div id="quizContainer">
+                    <!-- Questions will be dynamically inserted here -->
+                </div>
+
+                <div class="quiz-actions">
+                    <button type="submit" class="btn">Submit Quiz</button>
+                    <button type="button" id="resetQuiz" class="btn btn-secondary">Reset</button>
+                </div>
+
+                <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sanchez, Zakari. All rights reserved.</p>
+            <p>Contact: zakarisanchez13@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="home-script.js"></script>
+    <script src="assessment-quiz.js"></script>
+</body>
+</html>

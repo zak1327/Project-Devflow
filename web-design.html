@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designing - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="web-design.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="web-design-hero">
+        <h1>Web Designing</h1>
+        <p>Welcome to the Web Designing service page. Explore how to create stunning, responsive, and user-friendly websites!</p>
+    </header>
+    <section class="web-design-section">
+        <h2>What is Web Designing?</h2>
+        <p>Web designing is the art and science of building visually appealing, accessible, and interactive websites. It combines creativity with technology to deliver seamless user experiences across devices.</p>
+        <div class="web-design-examples">
+            <div class="web-design-example">
+                <h3>Responsive Layouts</h3>
+                <p>Designs that adapt to any screen size, ensuring your site looks great on mobile, tablet, and desktop.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Modern Color Schemes</h3>
+                <p>Use harmonious color palettes and gradients to create visually engaging interfaces.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Typography</h3>
+                <p>Choose fonts and text styles that enhance readability and brand identity.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>UI/UX Principles</h3>
+                <p>Apply best practices for navigation, accessibility, and interactivity to delight users.</p>
+            </div>
+        </div>
+        <div class="web-design-functions">
+            <h2 class="centered-heading">Basic Front-End Functions</h2>
+            <div class="web-design-function">
+                <h3>1. Show/Hide Element</h3>
+                <p>This function toggles the visibility of an element on the page, useful for modals, menus, or tooltips.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+function toggleVisibility(id) {
+    const el = document.getElementById(id);
+    if (el.style.display === 'none') {
+        el.style.display = 'block';
+    } else {
+        el.style.display = 'none';
+    }
+}
+// Usage: toggleVisibility('myDiv');
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>2. Change Element Content</h3>
+                <p>Updates the text or HTML content of a specified element, allowing dynamic page updates.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+document.getElementById('demo').innerText = 'Hello, world!';
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>3. Add Event Listener</h3>
+                <p>Attaches an event handler to an element, enabling interactivity such as clicks or mouseovers.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+document.getElementById('btn').addEventListener('click', function() {
+    alert('Button clicked!');
+});
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>4. Form Validation</h3>
+                <p>Checks user input before submitting a form, improving user experience and data quality.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+function validateForm() {
+    const email = document.getElementById('email').value;
+    if (!email.includes('@')) {
+        alert('Please enter a valid email.');
+        return false;
+    }
+    return true;
+}
+// Usage: Attach to form's onsubmit
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>5. Get Input Value</h3>
+                <p>Retrieves the value entered by a user in an input field, useful for forms and dynamic content.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+const value = document.getElementById('inputId').value;
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>6. Change Element Style</h3>
+                <p>Modifies the CSS style of an element dynamically, allowing for interactive UI changes.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+document.getElementById('box').style.backgroundColor = 'yellow';
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>7. Create Element</h3>
+                <p>Creates a new HTML element and adds it to the DOM, enabling dynamic page content.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+const newDiv = document.createElement('div');
+newDiv.innerText = 'New content!';
+document.body.appendChild(newDiv);
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>8. Remove Element</h3>
+                <p>Removes an element from the DOM, useful for deleting items or cleaning up the UI.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+const el = document.getElementById('removeMe');
+el.parentNode.removeChild(el);
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>9. Prevent Default Form Submit</h3>
+                <p>Prevents a form from submitting and reloading the page, allowing for custom validation or AJAX.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Custom logic here
+});
+</code></pre>
+                </div>
+            </div>
+            <div class="web-design-function">
+                <h3>10. Query Selector</h3>
+                <p>Selects the first element that matches a CSS selector, providing flexible DOM access.</p>
+                <div class="function-example">
+<pre><code>// JavaScript Example
+const firstButton = document.querySelector('.btn');
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sanchez, Zakari. All rights reserved.</p>
+            <p>Contact: zakarisanchez13@gmail.com</p>
+        </div>
+    </footer>
+    <script src="home-script.js"></script>
+</body>
+</html>

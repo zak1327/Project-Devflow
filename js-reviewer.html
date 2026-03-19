@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Reviewer - Project DEVFLOW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="code-reviewer.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Project DEVFLOW</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="reviewer-hero">
+        <h1>JavaScript Reviewer</h1>
+        <p>Review essential JavaScript functions and concepts for web development.</p>
+    </header>
+    <section class="reviewer-section">
+        <a href="code-development.html" class="back-btn">&larr; Back to Code Development</a>
+        <h2>What is JavaScript?</h2>
+        <p>JavaScript is a programming language that enables interactive web pages. It can update and change both HTML and CSS, and can calculate, manipulate, and validate data.</p>
+        <div class="web-design-examples">
+            <div class="web-design-example">
+                <h3>DOM Manipulation</h3>
+                <p>Interact with HTML elements and modify the document structure dynamically.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Event Handling</h3>
+                <p>Respond to user actions like clicks, key presses, and form submissions.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Data Processing</h3>
+                <p>Work with arrays, objects, and perform calculations on user data.</p>
+            </div>
+            <div class="web-design-example">
+                <h3>Asynchronous Programming</h3>
+                <p>Handle operations that take time, like API calls, without blocking the UI.</p>
+            </div>
+        </div>
+        <div class="reviewer-functions">
+            <h2 class="centered-heading">Basic JavaScript Functions</h2>
+            <div class="reviewer-function">
+                <h3>1. Function Declaration</h3>
+                <p>Define reusable blocks of code using function declarations.</p>
+                <div class="function-example">
+<pre><code>function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet('World'));</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>2. Arrow Functions</h3>
+                <p>Use concise syntax for function expressions with arrow functions.</p>
+                <div class="function-example">
+<pre><code>const add = (a, b) => a + b;
+console.log(add(5, 3)); // 8</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>3. Array Methods</h3>
+                <p>Use built-in methods like map, filter, and reduce for array operations.</p>
+                <div class="function-example">
+<pre><code>const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>4. DOM Selection</h3>
+                <p>Select HTML elements using methods like getElementById and querySelector.</p>
+                <div class="function-example">
+<pre><code>const element = document.getElementById('myDiv');
+element.textContent = 'Hello, DOM!';</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>5. Event Listeners</h3>
+                <p>Attach event handlers to elements to respond to user interactions.</p>
+                <div class="function-example">
+<pre><code>const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    alert('Button clicked!');
+});</code></pre>
+                </div>
+            </div>
+            <div class="reviewer-function">
+                <h3>6. Promises</h3>
+                <p>Handle asynchronous operations using Promises for better code flow.</p>
+                <div class="function-example">
+<pre><code>const fetchData = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve('Data loaded'), 1000);
+    });
+};
+fetchData().then(data => console.log(data));</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
